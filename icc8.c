@@ -1,7 +1,7 @@
 //
 // Created by Mies VanBeek on 2026-03-20.
 //
-#include <stdlib.h>;;;
+#include <stdlib.h>
 #include "icc8.h"
 #include <stdio.h>
 #include <string.h>
