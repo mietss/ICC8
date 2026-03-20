@@ -1,7 +1,7 @@
 //
 // Created by Mies VanBeek on 2026-03-20.
 //
-#include <stdlib.h>
+#include <stdlib.h>;;;
 #include "icc8.h"
 #include <stdio.h>
 #include <string.h>
@@ -10,7 +10,9 @@
 
 void add_banana(Banana **basket, int *capacity, char *name, int ripeness) {
     int size = *capacity + 1;
-    realloc(capacity, size);
+    Banana *temp = (Banana *)realloc(*basket, size * sizeof(Banana));
+    *basket = temp;
+    *capacity = size;
 
     basket[size - 1]->name = name;
     basket[size - 1]->ripeness = ripeness;
